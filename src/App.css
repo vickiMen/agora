@@ -1,10 +1,24 @@
 * {font-family: Helvetica, sans-serif;}
 
+#root {
+  display: grid;
+}
+
+#main-page {
+  background-image: url("agora-Corinth-Greece.jpg");
+  min-height: 100vh;
+}
+
+.main-page-container {
+  background-color: #e2e2e2b6;
+  width: 70vw;
+  height: 35vh;
+}
+
 .container {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 3ex;
-  margin: 20px;
+  grid-gap: 5ex;
+  margin: 40px;
 }
 
 .searchInput {
@@ -14,19 +28,100 @@
   justify-self: center;
 }
 
-.item {
+.itemsContainer {
   display: grid;
-  border-radius: 70px;
-  box-shadow: 1px 1px 5px #2c3e50;
-  height: 5vh;
-  grid-template-columns: 90% 7%;
-  align-content: center;
-  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-.butBtn {
+.item {
+  display: grid;
+  align-content: center;
+  padding: 20px;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+  grid-gap: 1em;
+  position: relative
+}
+
+
+.buyBtn {
   background-color: lightgray;
-  border-radius: 80px;
-  box-shadow: 1px 1px 5px #2c3e50; 
   cursor: pointer;
+  position: absolute;
+}
+
+.navBar {
+  display: grid;
+  grid-template-columns: repeat(5, 5vw);
+  justify-content: left;
+  grid-gap: 1ex;
+  cursor: pointer;
+  height: 70px;
+  align-content: center;
+  padding-left: 20ex;
+  background-color: #ffffff9d;
+}
+
+#title {
+  font-family: Helvetica;
+  font-style: bold;
+  font-size: 100%;
+}
+
+.front-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-right: 150px;
+  margin-left: 150px;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 15px;
+  background-color: #9b989883;
+  height: 25vh;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+#main-title {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-size: 2em;
+  color: #333940;
+}
+
+#sub-title {
+  display: grid;
+  text-align: center;
+  color: #333940;
+  font-family: monospace;
+}
+
+
+.srcArea {
+  display: grid;
+  grid-template-areas: 's s b';
+  justify-content: space-evenly;
+  grid-gap: 10px
+  
+}
+
+.search {
+  grid-area: 's';
+  width: 30vw;
+  padding: 15px;
+  border-radius: 60px;
+}
+
+.srcBtn {
+  grid-area: 'b';
+  width: 10vw;
+  border-radius: 60px;
+  cursor: pointer;
+  background-color: #4582EC;
+  color: white;
 }

@@ -21,12 +21,19 @@ class Item extends Component {
     }
 
     render() {
+        let item = this.props.item
         return (
             <div>
-                <li  className='item' onDoubleClick={this.changePrice}>
+                <div className='item' onDoubleClick={this.changePrice}>
+                    <div className='imgContainer'>
+                        <button className='buyBtn' onClick={this.buyItem}>Buy</button>
+                        <img src={item.img}></img>
+                    </div>
                     {this.props.inventory.description(this.props.item)}
-                    <button className='butBtn' onClick={this.buyItem}>Buy</button>
-                </li>
+                    <br></br>
+                    Seller: {item.seller}
+                    <br></br>
+                </div>
             </div>
         )
     }
